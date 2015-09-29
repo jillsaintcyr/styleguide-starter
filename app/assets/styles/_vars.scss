@@ -1,0 +1,118 @@
+/*------------------------------------*\
+    VARIABLES
+\*------------------------------------*/
+
+
+/* ----- Paths ----- */
+
+$img-path: 'assets/images/';
+$font-path: 'assets/styles/fonts';
+
+
+/* ----- Colors ----- */
+
+// Neutrals
+$color-white: #fff;
+$color-black: #222;
+$color-grey: #666;
+$color-grey-light: #aaa;
+$color-grey-dark: #444;
+$color-grey-lightest: #ddd;
+
+// Brand Colors
+$color-primary: red;
+$color-primary-light: mix($color-primary, $color-white, 25%);
+$color-primary-dark: mix($color-primary, $color-black, 25%);
+
+$color-secondary: green;
+$color-secondary-light: mix($color-secondary, $color-white, 25%);
+$color-secondary-dark: mix($color-secondary, $color-black, 25%);
+
+$color-tertiary: blue;
+$color-tertiary-light: mix($color-tertiary, $color-white, 25%);
+$color-tertiary-dark: mix($color-tertiary, $color-black, 25%);
+
+// Other
+$color-text: $color-black;
+$border-color: $color-grey-lightest;
+
+// $colors: ;
+
+
+/* ----- Typography ----- */
+
+$font-family-default: sans-serif;
+$font-family-display: serif;
+
+$heading-size-xl    : 3rem;
+$heading-size-l     : 2.5rem;
+$heading-size-m     : 2rem;
+$heading-size-s     : 1.5rem;
+$heading-size-xs    : 1rem;
+
+$copy-size-xl  : 1.5rem;
+$copy-size-l   : 1.25rem;
+$copy-size-m   : 1rem;
+$copy-size-s   : 0.75rem;
+$copy-size-xs  : 0.5rem;
+
+$line-height-l: 1.5;
+$line-height-m: 1.25;
+$line-height-s: 1.1;
+
+
+/* ----- Responsive & Grid ----- */
+
+$pad: 1rem;
+$content-max-width: 940px;
+
+// Starting breakpoints - use more as needed in component and page files
+
+$mobile     : 320px;
+$tablet     : 640px;
+$desktop    : 1024px;
+$widescreen : 1440px;
+
+
+/* ----- Layering ----- */
+
+$z-modal: 2000;
+$z-nav: 1000;
+
+
+/* ----- Icon Font ----- */
+
+$fonticons:
+    'account' '\e617',
+    'add' '\e600',
+    'checkbox-big' '\e60b',
+    'checkbox-big-checked' '\e60a',
+    'dot' '\e605',
+    'dotted-line-big-tile' '\e606',
+    'dotted-line-tile' '\e607',
+    'dropdown-menu-dotted-rule' '\e609',
+    'facebook' '\e61f',
+    'facebook-iso' '\e603',
+    'flavor-of-the-month' '\e60d',
+    'menu' '\e60c',
+    'modal-close' '\e627',
+    'pinterest' '\e620',
+    'pointer-down' '\e628',
+    'pointer-left' '\e629',
+    'pointer-right' '\e62a',
+    'pointer-up' '\e62b',
+    'remove' '\e601',
+    'spoon' '\e622',
+    'spoon-reg' '\e621',
+    'stamp-facebook' '\e602',
+    'twitter' '\e623',
+    'youtube' '\e624'
+;
+
+
+/* ----- Other ----- */
+
+$border-width: 3px;
+$transparency: 0.5;
+$box-shadow: 0 0 1px rgba($color-black, $transparency);
+$text-shadow: 0 0 1px rgba($color-black, $transparency);

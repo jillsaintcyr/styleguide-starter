@@ -1,0 +1,84 @@
+---
+title: Index
+list: none
+layout: minimal.hbs
+---
+
+<div class="index" data-action="index">
+    <h1>Page Index</h1>
+    <p class="lead">Use the links in each section below to view our living reference materials, as well as pages which are in progress, with QA and done/ready for integration.</p>
+
+    {{!-- Move pages to the appropriate section below by adding or modifying their 'list' YAML attribute to one of the following: reference, in-progress, in-test, done. --}}
+
+    <h2 class="reference-heading">Reference</h2>
+    <ul>
+        {{#withSort pages 'data.title'}}
+            {{#isnt this.data.index 'none'}}
+                {{#is this.data.list 'reference'}}
+                    {{#unless_eq basename compare='title'}}
+                        <li>
+                            <a href="{{pagename}}">{{data.title}}</a>
+                            {{#if data.description}}
+                                <span class="description">{{data.description}}</span>
+                            {{/if}}
+                        </li>
+                    {{/unless_eq}}
+                {{/is}}
+            {{/isnt}}
+        {{/withSort}}
+    </ul>
+
+    <h2 class="reference-heading">In Progress</h2>
+    <ul>
+        {{#withSort pages 'data.title'}}
+            {{#isnt this.data.index 'none'}}
+                {{#is this.data.list 'in-progress'}}
+                    {{#unless_eq basename compare='title'}}
+                        <li>
+                            <a href="{{pagename}}">{{data.title}}</a>
+                            {{#if data.description}}
+                                <span class="description">{{data.description}}</span>
+                            {{/if}}
+                        </li>
+                    {{/unless_eq}}
+                {{/is}}
+            {{/isnt}}
+        {{/withSort}}
+    </ul>
+
+    <h2 class="reference-heading">In Testing</h2>
+    <ul>
+        {{#withSort pages 'data.title'}}
+            {{#isnt this.data.index 'none'}}
+                {{#is this.data.list 'in-test'}}
+                    {{#unless_eq basename compare='title'}}
+                        <li>
+                            <a href="{{pagename}}">{{data.title}}</a>
+                            {{#if data.description}}
+                                <span class="description">{{data.description}}</span>
+                            {{/if}}
+                        </li>
+                    {{/unless_eq}}
+                {{/is}}
+            {{/isnt}}
+        {{/withSort}}
+    </ul>
+
+    <h2 class="reference-heading">Done</h2>
+    <ul>
+        {{#withSort pages 'data.title'}}
+            {{#isnt this.data.index 'none'}}
+                {{#is this.data.list 'done'}}
+                    {{#unless_eq basename compare='title'}}
+                        <li>
+                            <a href="{{pagename}}">{{data.title}}</a>
+                            {{#if data.description}}
+                                <span class="description">{{data.description}}</span>
+                            {{/if}}
+                        </li>
+                    {{/unless_eq}}
+                {{/is}}
+            {{/isnt}}
+        {{/withSort}}
+    </ul>
+</div>
