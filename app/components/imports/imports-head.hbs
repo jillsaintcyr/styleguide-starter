@@ -1,0 +1,16 @@
+<!-- build:css(app/bower_components) assets/styles/vendor.css -->
+<!-- bower:css -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- legacy.css for IE8 and below removes media queries -->
+
+<!--[if lt IE 9]>
+    <link rel="stylesheet" href="assets/styles/legacy.css">
+<![endif]-->
+
+<!--[if gt IE 8]><!-->
+    <!-- build:css(.tmp) assets/styles/main.css -->
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- endbuild -->
+<!--<![endif]-->

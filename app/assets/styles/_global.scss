@@ -8,7 +8,6 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
-    font-size: 62.5%; // set root font size to ~10px for easy calculation
     box-sizing: border-box; // subtract padding from declared widths
 }
 
@@ -17,6 +16,94 @@ body {
 }
 
 body {
-    font-size: 16px;
-    line-height: 1.4; // unitless line-height to be based off the element's size
+    font-size: $font-size-default;
+    line-height: $line-height-l; // unitless line-height to be based off the element's size
+}
+
+
+/* ----- Global Element Styles ----- */
+
+a {
+    color: $color-link;
+    text-decoration: none;
+    transition: color 250ms ease-in-out;
+    &:hover {
+        color: $color-link-hover;
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+// heading reset
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-display;
+    font-weight: normal;
+    font-size: $heading-size-m;
+    margin: $pad 0 0;
+    line-height: $line-height-s;
+}
+
+h1 {
+    font-size: $heading-size-l;
+}
+
+h2 {
+    font-size: $heading-size-m;
+}
+
+h3 {
+    font-size: $heading-size-m;
+}
+
+h4 {
+    font-size: $heading-size-s;
+}
+
+h5 {
+    font-size: $heading-size-s;
+}
+
+h6 {
+    font-size: $copy-size-l;
+}
+
+p {
+    margin: $pad 0;
+}
+
+ul,
+ol {
+    margin-left: 0;
+    padding-left: $pad;
+    ul,
+    ol {
+        margin-left: $pad;
+    }
+}
+
+dt {
+    font-family: $font-family-display;
+    margin-top: $pad;
+    margin-bottom: $pad/3;
+    font-size: $copy-size-m;
+    text-transform: uppercase;
+}
+
+dd {
+    margin: 0 0 $pad/3 $pad;
+    font-size: $copy-size-s;
+}
+
+
+/* ----- Global Utility Classes ----- */
+
+
+/* ----- Layout ----- */
+
+.wrapper {
+    max-width: $content-max-width;
+    padding: $pad*2;
+    margin: 0 auto;
 }

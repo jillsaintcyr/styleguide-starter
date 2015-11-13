@@ -1,0 +1,194 @@
+/*------------------------------------*\
+    FORM STYLES
+\*------------------------------------*/
+
+$inputHeight: 40px;
+
+form {
+    margin: 0 auto;
+    ol,
+    > ol,
+    fieldset > ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        ol {
+            padding: 0;
+            margin: $pad 0;
+        }
+        li {
+            margin: 0 0 $pad*1.5;
+            padding: 0;
+            text-indent: 0;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+fieldset {
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    max-width: $bp-m;
+    position: relative;
+}
+
+legend {
+    display: none;
+}
+
+label {
+    color: $color-grey;
+    display: block;
+    font-family: $font-family-display;
+    font-size: $copy-size-s;
+    font-weight: bold;
+    padding-right: 2%;
+    margin: 0 0 0.25em;
+    text-align: left;
+    text-transform: uppercase;
+    small {
+        font-size: 1em;
+        text-transform: none;
+    }
+    &.label--hidden {
+        @include sr-only;
+        .lte-ie9 & {
+            position: static;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+input {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: $color-grey;
+    display: block;
+    outline: none;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: $inputHeight;
+    line-height: 1;
+    + & {
+        margin-right: 6px;
+    }
+    &[type="radio"],
+    &[type="checkbox"] {
+        display: inline-block;
+        float: left;
+        margin-right: $pad/4;
+    }
+    &[type="text"],
+    &[type="search"],
+    &[type="email"],
+    &[type="date"],
+    &[type="tel"],
+    &[type="password"] {
+        box-sizing: border-box; // override normalize
+    }
+    &[type="radio"] {
+        display: inline-block;
+    }
+}
+
+select {
+    // -moz-appearance: none;
+    // -webkit-appearance: none;
+    background: none;
+    border: 1px solid $color-grey;
+    color: $color-grey;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: $inputHeight;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// Keep placeholder rules separate despite same styles
+// due to browsers failing on other browser prefixes
+// if in a combined selector string
+
+// ::-webkit-input-placeholder {
+//     text-transform: uppercase;
+// }
+
+// ::-moz-placeholder {  /* Firefox 19+ */
+//    text-transform: uppercase;
+// }
+
+// :-ms-input-placeholder {
+//    text-transform: uppercase;
+// }
+
+// ::placeholder {
+//     text-transform: uppercase;
+// }
+
+textarea {
+    border: 1px solid rgba(0,0,0,.2);
+    padding: $pad/4 1em;
+    width: 100%;
+}
+
+// Help text alongside a field
+.note {
+    color: #777;
+    font-size: $copy-size-s;
+    margin: $pad/3 0 $pad;
+}
+
+input[type="button"],
+input[type="submit"],
+.cta {
+    background-color: $color-primary;
+    border-radius: $radius;
+    border: none;
+    color: $color-white;
+    display: inline-block;
+    font-size: $copy-size-m;
+    min-height: 2rem;
+    line-height: 1;
+    padding: 0.65rem 1rem 0.45rem;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba($color-black, 0.5);
+    transition: all 500ms ease-in-out;
+    width: auto;
+    &:hover,
+    &:focus {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+}
+
+.form-list--radio {
+    margin: $pad/2 0;
+    padding: 0;
+    @include clearfix;
+    li {
+        list-style: none;
+        margin: 0 0 $pad/3;
+        padding: 0 0 0 $pad/3;
+        overflow: hidden;
+        input, label {
+            display: inline-block;
+            float: left;
+            height: auto;
+            width: auto;
+            line-height: 1;
+        }
+        input {
+            margin-right: $pad/2;
+        }
+        label {
+            text-transform: none;
+            margin-right: $pad;
+            font-size: $copy-size-m;
+            font-weight: normal;
+        }
+    }
+}

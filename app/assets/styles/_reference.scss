@@ -1,0 +1,169 @@
+/*------------------------------------*\
+    REFERENCE STYLES
+\*------------------------------------*/
+
+.reference-heading {
+    border-bottom: 8px solid rgba($color-primary, 0.25);
+    text-transform: uppercase;
+    font-size: $copy-size-m;
+    padding-bottom: $pad/1.5;
+    margin-top: $pad*3;
+    clear: both;
+}
+
+.reference-text {
+    color: #777;
+    margin: $pad 0 $pad*2;
+    max-width: 40em;
+    font-size: $copy-size-m;
+    & + & {
+        margin-top: -$pad;
+    }
+}
+
+p code {
+    background-color: rgba($color-secondary, 0.1);
+    border-radius: 3px;
+    color: $color-secondary;
+    font-size: 0.85em;
+    padding: 1px 3px;
+}
+
+.jump-to {
+    margin-top: -$pad;
+    a {
+        margin-left: $pad;
+        display: inline-block;
+    }
+}
+
+.back-to-top {
+    display: block;
+    text-align: right;
+    margin: $pad*2 0 $pad;
+}
+
+.styleguide {
+    max-width: $bp-l;
+    margin: 0 auto;
+    &__colorlist {
+        li {
+            vertical-align: middle;
+            line-height: 20px;
+            padding-top: 5px;
+            padding-bottom: 15px;
+            margin-bottom: 0;
+            display: block;
+            overflow: hidden;
+            -moz-column-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            column-break-inside: avoid;
+            &:before {
+                content: '';
+                display: inline-block;
+                float: left;
+                height: 40px;
+                width: 40px;
+                background-color: #ddd;
+                margin-right: 10px;
+                border-radius: 360px;
+                border: 1px solid rgba(0,0,0,0.35);
+                position: relative;
+                top: -3px;
+            }
+            &:after {
+                display: block;
+                font-size: 0.8em;
+                color: #888;
+                text-indent: 10px;
+            }
+            // &.brand-black {
+            //     @include color-item($brand-black);
+            // }
+        }
+        @each $colorSlug, $colorVar in $colors {
+            .#{ $colorSlug } {
+                &:before {
+                    background-color: $colorVar;
+                }
+                &:after {
+                    content: '' + $colorVar ;
+                }
+            }
+        }
+    }
+}
+
+.code-label {
+    font-size: $copy-size-s;
+    background-color: #444;
+    padding: 3px $pad;
+    width: auto;
+    display: inline-block;
+    margin: $pad 0;
+    color: #ddd;
+    position: relative;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 4px;
+    &:after {
+        content: '';
+        border-top: 8px solid #444;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        bottom: -8px;
+        left: 10px;
+    }
+    & + * {
+        display: block;
+    }
+    & + .btn {
+        margin-bottom: $pad;
+    }
+}
+
+// .minimal-nav {
+//     overflow: hidden;
+//     padding: 0 $pad $pad/2 $pad;
+//     a {
+//         float: right;
+//     }
+// }
+
+// .icon-example {
+//     overflow: hidden;
+//     padding-bottom: $pad*2;
+//     list-style: none;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: flex-start;
+//     width: 100%;
+//     margin: $pad 0;
+//     padding: 0;
+//     &__item {
+//         text-align: center;
+//         .mixin-flex-item();
+//         margin: 0;
+//         padding-bottom: $pad;
+//     }
+//     &__icon {
+//         display: block;
+//         font-size: 3rem;
+//         line-height: 1;
+//         color: $color-blue;
+//         transition: all 500ms ease-in-out;
+//         margin: 0 auto $pad;
+//         &:hover {
+//             color: $color-blue-med;
+//         }
+//     }
+//     &__label {
+//         color: $color-grey-med;
+//         font-size: 0.85rem;
+//     }
+//     .mixin-bp({
+//         .mixin-flexbox();
+//     }, $tablet);
+// } margin-left: $pad;
+// }

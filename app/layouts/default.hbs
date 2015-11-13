@@ -13,11 +13,11 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- desktop.css for IE8 and below removes media queries -->
+        <!-- legacy.css for IE8 and below removes media queries -->
 
         <!--[if lt IE 9]>
             <link rel="stylesheet" href="assets/styles/legacy.css">
-            <![endif]-->
+        <![endif]-->
 
         <!--[if gt IE 8]><!-->
             <!-- build:css(.tmp) assets/styles/main.css -->
@@ -27,6 +27,7 @@
 
     </head>
     <body>
+
         <div class="wrapper">
             {{> body }}
         </div>
