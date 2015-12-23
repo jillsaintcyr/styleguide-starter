@@ -1,0 +1,26 @@
+/* ----- Cta component styles ----- */
+
+.cta {
+    background-color: $color-primary;
+    border-radius: $radius;
+    border: none;
+    color: $color-white;
+    display: block;
+    font-size: $copy-size-s;
+    min-height: 2rem;
+    line-height: 1;
+    padding: 0.65rem 1rem 0.45rem;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba($color-black, 0.5);
+    transition: all 500ms ease-in-out;
+    width: auto;
+    max-width: 200px;
+    &:hover,
+    &:focus {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+    &--secondary {
+        background-color: $color-secondary;
+    }
+}

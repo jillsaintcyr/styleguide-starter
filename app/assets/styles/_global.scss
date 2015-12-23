@@ -16,6 +16,7 @@ body {
 }
 
 body {
+    font-family: $font-family-default;
     font-size: $font-size-default;
     line-height: $line-height-l; // unitless line-height to be based off the element's size
 }
@@ -25,6 +26,7 @@ body {
 
 a {
     color: $color-link;
+    font-weight: bold;
     text-decoration: none;
     transition: color 250ms ease-in-out;
     &:hover {
@@ -96,6 +98,15 @@ dd {
     font-size: $copy-size-s;
 }
 
+pre li * {
+    font-family: monospace !important;
+    font-size: 1rem;
+    line-height: 1.2 !important;
+    color: $color-black;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 
 /* ----- Global Utility Classes ----- */
 
@@ -106,4 +117,9 @@ dd {
     max-width: $content-max-width;
     padding: $pad*2;
     margin: 0 auto;
+}
+
+.minimal-nav {
+    padding: $pad;
+    text-align: right;
 }

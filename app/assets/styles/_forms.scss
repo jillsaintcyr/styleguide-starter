@@ -142,29 +142,6 @@ textarea {
     margin: $pad/3 0 $pad;
 }
 
-input[type="button"],
-input[type="submit"],
-.cta {
-    background-color: $color-primary;
-    border-radius: $radius;
-    border: none;
-    color: $color-white;
-    display: inline-block;
-    font-size: $copy-size-m;
-    min-height: 2rem;
-    line-height: 1;
-    padding: 0.65rem 1rem 0.45rem;
-    text-align: center;
-    text-shadow: 0 1px 1px rgba($color-black, 0.5);
-    transition: all 500ms ease-in-out;
-    width: auto;
-    &:hover,
-    &:focus {
-        background-color: $color-primary;
-        color: $color-white;
-    }
-}
-
 .form-list--radio {
     margin: $pad/2 0;
     padding: 0;

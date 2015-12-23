@@ -2,12 +2,108 @@
     REFERENCE STYLES
 \*------------------------------------*/
 
+@import "vendor/prism";
+
+pre[class*="language-"] {
+    margin: $pad*3 0 $pad*4;
+    position: relative;
+    overflow: visible;
+    border-radius: 0 ;
+    code {
+        margin: 0;
+        font-size: 12px;
+    }
+    &.break-word {
+        code {
+            word-wrap: break-word;
+        }
+    }
+    &:before {
+        @include transition();
+        background-color: $color-grey-lightest;
+        border-bottom: none;
+        border-radius: 0;
+        // border: 1px solid $color-black;
+        color: $color-grey-dark;
+        content: "- Code -";
+        display: block;
+        font-size: $copy-size-s;
+        left: 0;
+        padding: $pad/2;
+        position: absolute;
+        top: -30px;
+        width: 100%;
+    }
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    line-height: 1.35;
+}
+
+/* Desktop layout */
+@include respond-to(1024px) {
+    .reference-page {
+        display: flex;
+    }
+
+    .reference-nav {
+        flex: 1;
+    }
+
+    .reference-body {
+        flex: 3;
+    }
+}
+
+.reference-nav {
+    margin: 0 0 $pad;
+    &__heading {
+        font-weight: bold;
+        font-size: $copy-size-s;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+    &__item {
+        font-size: $copy-size-m;
+        list-style: none;
+        margin: $pad 0;
+        a {
+            color: $color-primary;
+            &:hover {
+                color: $color-primary-light;
+            }
+        }
+        &.is-active {
+            a {
+                color: $color-grey-light;
+                &:after {
+                    content: " >";
+                }
+                &:hover {
+                    color: $color-grey-light;
+                }
+            }
+        }
+    }
+}
+
 .reference-heading {
-    border-bottom: 8px solid rgba($color-primary, 0.25);
-    text-transform: uppercase;
-    font-size: $copy-size-m;
-    padding-bottom: $pad/1.5;
-    margin-top: $pad*3;
+    font-size: $heading-size-l;
+    font-weight: bold;
+    color: $color-primary;
+    margin: 0;
+}
+
+.reference-subheading {
+    font-size: $heading-size-s;
+    font-weight: bold;
+    color: $color-grey-light;
+    margin: $pad*3 0 $pad;
     clear: both;
 }
 
@@ -15,7 +111,7 @@
     color: #777;
     margin: $pad 0 $pad*2;
     max-width: 40em;
-    font-size: $copy-size-m;
+    font-size: $copy-size-s;
     & + & {
         margin-top: -$pad;
     }
@@ -25,7 +121,7 @@ p code {
     background-color: rgba($color-secondary, 0.1);
     border-radius: 3px;
     color: $color-secondary;
-    font-size: 0.85em;
+    font-size: 0.95em;
     padding: 1px 3px;
 }
 
@@ -47,6 +143,7 @@ p code {
     max-width: $bp-l;
     margin: 0 auto;
     &__colorlist {
+        columns: 2;
         li {
             vertical-align: middle;
             line-height: 20px;
@@ -54,7 +151,8 @@ p code {
             padding-bottom: 15px;
             margin-bottom: 0;
             display: block;
-            overflow: hidden;
+            width: 100%;
+            overflow: visible;
             -moz-column-break-inside: avoid;
             -webkit-column-break-inside: avoid;
             column-break-inside: avoid;

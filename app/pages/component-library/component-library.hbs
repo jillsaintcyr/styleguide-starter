@@ -6,14 +6,14 @@ layout: minimal.hbs
 
 <div class="component-library" data-action="componentLibrary">
 
-    <h1>Component Library</h1>
-    <p class="lead">Major components which are shareable across various pages of the site should be included here for reference.</p>
+    <h1 class="reference-heading">Component Library</h1>
+    <p class="reference-text">Major components which are shareable across various pages of the site should be included here for reference.</p>
 
     {{!--
 
         Example:
 
-        <h2 class="reference-heading">Partial Name</h2>
+        <h2 class="reference-subheading">Partial Name</h2>
         <p class="reference-text">Descriptive text if needed regarding variations, usage, and code.</p>
 
         <code class="code-label">.classname</code>
@@ -21,11 +21,28 @@ layout: minimal.hbs
 
     --}}
 
-    <h2 class="reference-heading">Partial Name</h2>
-    <p class="reference-text">Descriptive text if needed regarding variations, usage, and code.</p>
+    <h2 class="reference-subheading">CTAs</h2>
+    <p class="reference-text">Two variations of CTAs exist. Specify text, URL and variant properties using parseJSON within other templates.</p>
 
-    <code class="code-label">.classname</code>
-    {{!-- {{> partial-name }} --}}
+    <code class="code-label">.cta</code>
+    {{#parseJSON '{"text": "Button Text"}'}}
+        {{> cta }}
+    {{/parseJSON}}
+    <pre><code class="language-html">{{#markdown}}
+    {{#parseJSON '{"text": "Button Text"}'}}
+        {{> cta }}
+    {{/parseJSON}}
+{{/markdown}}</code></pre>
+
+    <code class="code-label">.cta.cta--secondary</code>
+    {{#parseJSON '{"text": "Button Text", "url": "http://nyt.com", "variant": "cta--secondary"}'}}
+        {{> cta }}
+    {{/parseJSON}}
+    <pre><code class="language-html">{{#markdown}}
+    {{#parseJSON '{"text": "Button Text", "url": "http://nyt.com", "variant": "cta--secondary"}'}}
+        {{> cta }}
+    {{/parseJSON}}
+{{/markdown}}</code></pre>
 
     <a href="#top" class="back-to-top">Back to top</a>
 

@@ -5,12 +5,12 @@ layout: minimal.hbs
 ---
 
 <div class="index" data-action="index">
-    <h1>Page Index</h1>
-    <p class="lead">Use the links in each section below to view our living reference materials, as well as pages which are in progress, with QA and done/ready for integration.</p>
+    <h1 class="reference-heading">Page Index</h1>
+    <p class="reference-text">Use the links in each section below to view our living reference materials, as well as pages which are in progress, with QA and done/ready for integration.</p>
 
     {{!-- Move pages to the appropriate section below by adding or modifying their 'list' YAML attribute to one of the following: reference, in-progress, in-test, done. --}}
 
-    <h2 class="reference-heading">Reference</h2>
+    <h2 class="reference-subheading">Reference</h2>
     <ul>
         {{#withSort pages 'data.title'}}
             {{#isnt this.data.index 'none'}}
@@ -28,7 +28,7 @@ layout: minimal.hbs
         {{/withSort}}
     </ul>
 
-    <h2 class="reference-heading">In Progress</h2>
+    <h2 class="reference-subheading">In Progress</h2>
     <ul>
         {{#withSort pages 'data.title'}}
             {{#isnt this.data.index 'none'}}
@@ -46,7 +46,7 @@ layout: minimal.hbs
         {{/withSort}}
     </ul>
 
-    <h2 class="reference-heading">In Testing</h2>
+    <h2 class="reference-subheading">In Testing</h2>
     <ul>
         {{#withSort pages 'data.title'}}
             {{#isnt this.data.index 'none'}}
@@ -64,7 +64,7 @@ layout: minimal.hbs
         {{/withSort}}
     </ul>
 
-    <h2 class="reference-heading">Done</h2>
+    <h2 class="reference-subheading">Done</h2>
     <ul>
         {{#withSort pages 'data.title'}}
             {{#isnt this.data.index 'none'}}

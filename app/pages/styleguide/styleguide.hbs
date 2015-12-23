@@ -5,84 +5,128 @@ layout: minimal.hbs
 ---
 
 <div class="styleguide" data-action="styleguide">
-    <h1>Styleguide</h1>
-    <p class="lead">This page is intended to serve as a living style guide of components on the site, complete with code references where applicable.</p>
 
-    <p class="jump-to">Jump to:
-        <a href="#color">Color</a>
-        <a href="#type">Typography</a>
-        <a href="#lists">Lists</a>
-        <a href="#buttons">Buttons</a>
-        <a href="#forms">Forms</a>
-        <a href="#helpers">Helpers</a>
-        <a href="#other">Other</a>
-    </p>
+    <div class="reference-page">
 
+        <nav class="reference-nav">
+            <h3 class="reference-nav__heading">Sections</h3>
+            <ul class="reference-nav__list">
+                <li class="reference-nav__item"><a href="#type">Typography</a></li>
+                <li class="reference-nav__item is-active"><a href="#color">Color</a></li>
+                <li class="reference-nav__item"><a href="#lists">Lists</a></li>
+                <li class="reference-nav__item"><a href="#forms">Forms</a></li>
+                <li class="reference-nav__item"><a href="#helpers">Helpers</a></li>
+                <li class="reference-nav__item"><a href="#other">Other</a></li>
+            </ul>
+        </nav>
 
-    <a name="color" id="color"></a>
-    <h2 class="reference-heading">Color Palette</h2>
-    <p class="reference-text">The following list represents all color variables available in the project. Reference them throughout the code using their @name.</p>
+        <div class="reference-body">
 
-    <ul class="styleguide__colorlist">
-        <li class="color-primary">$color-primary</li>
-        <li class="color-primary-dark">$color-primary-dark</li>
-        <li class="color-primary-light">$color-primary-light</li>
-        <li class="color-secondary">$color-secondary</li>
-        <li class="color-secondary-dark">$color-secondary-dark</li>
-        <li class="color-secondary-light">$color-secondary-light</li>
-        <li class="color-tertiary">$color-tertiary</li>
-        <li class="color-tertiary-dark">$color-tertiary-dark</li>
-        <li class="color-tertiary-light">$color-tertiary-light</li>
-        <li class="color-text">$color-text</li>
-        <li class="color-border">$color-border</li>
-        <li class="color-link">$color-link</li>
-        <li class="color-link-hover">$color-link-hover</li>
-    </ul>
-    <a href="#top" class="back-to-top">Back to top</a>
+            <h1 class="reference-heading">Styleguide</h1>
+            <p class="reference-text">This page is intended to serve as a living style guide of components on the site, complete with code references where applicable.</p>
 
+            <div class="reference-section">
+            <a name="type" id="type"></a>
+            <h2 class="reference-subheading">Typography</h2>
+            <p class="reference-text">The elements below represent the default styling for H1-H6 semantic heading levels in HTML. These elements are usually styled with additional classes.</p>
 
-    <a name="type" id="type"></a>
-    <h2 class="reference-heading">Typography</h2>
-    <p class="reference-text">The elements below represent the default styling for H1-H6 semantic heading levels in HTML. These elements are usually styled with additional classes.</p>
+            <h1>Heading Level 1: Page Title</h1>
+            <h2>Heading Level 2: Page Subtitle</h2>
 
-    <code class="code-label">h1 and h2</code>
+    <pre><code class="language-html">{{#markdown}}
+    <!-- test comment -->
     <h1>Heading Level 1: Page Title</h1>
     <h2>Heading Level 2: Page Subtitle</h2>
+{{/markdown}}</code></pre>
 
-    <code class="code-label">h3 and h4</code>
+            <h3>Heading Level 3: Section Title</h3>
+            <h4>Heading Level 4: Section Subtitle</h4>
+
+    <pre><code class="language-html">{{#markdown}}
     <h3>Heading Level 3: Section Title</h3>
     <h4>Heading Level 4: Section Subtitle</h4>
+{{/markdown}}</code></pre>
 
-    <code class="code-label">h5 and h6</code>
+            <h5>Heading Level 5: Subsection Title</h5>
+            <h6>Heading Level 6: Subsection Subtitle</h6>
+
+    <pre><code class="language-html">{{#markdown}}
     <h5>Heading Level 5: Subsection Title</h5>
     <h6>Heading Level 6: Subsection Subtitle</h6>
+{{/markdown}}</code></pre>
 
-    <code class="code-label">p.lead</code>
-    <p class="lead">Paragraph Text Lorem ipsum dolor sit amet, <strong>strong text</strong> consectetur adipiscing elit. Fusce sem arcu, lobortis sollicitudin dolor ac, euismod accumsan eros.</p>
+            <p>Paragraph Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sem arcu, lobortis sollicitudin dolor ac, euismod accumsan eros. <strong>Pellentesque habitant</strong> morbi <a href="#">link in running text</a> tristique senectus et netus et malesuada fames ac turpis egestas. Nam laoreet lacus lacus, ut scelerisque massa porttitor eu. Etiam <em>suscipit purus arcu</em>, sed ultricies metus lobortis at. Curabitur ante nibh, iaculis sit amet vehicula nec, rutrum non ante.</p>
 
-    <code class="code-label">p</code>
+    <pre class="break-word"><code class="language-html">{{#markdown}}
     <p>Paragraph Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sem arcu, lobortis sollicitudin dolor ac, euismod accumsan eros. <strong>Pellentesque habitant</strong> morbi <a href="#">link in running text</a> tristique senectus et netus et malesuada fames ac turpis egestas. Nam laoreet lacus lacus, ut scelerisque massa porttitor eu. Etiam <em>suscipit purus arcu</em>, sed ultricies metus lobortis at. Curabitur ante nibh, iaculis sit amet vehicula nec, rutrum non ante.</p>
-    <a href="#top" class="back-to-top">Back to top</a>
+{{/markdown}}</code></pre>
+
+            <a href="#top" class="back-to-top">Back to top</a>
+            </div>
 
 
-    <a name="lists" id="lists"></a>
-    <h2 class="reference-heading">Lists</h2>
+            <a name="color" id="color"></a>
+            <h2 class="reference-subheading">Color Palette</h2>
+            <p class="reference-text">The following list represents all color variables available in the project. Reference them throughout the code using their @name.</p>
 
-    <code class="code-label">ul</code>
+            <ul class="styleguide__colorlist">
+                <li class="color-primary">$color-primary</li>
+                <li class="color-primary-dark">$color-primary-dark</li>
+                <li class="color-primary-light">$color-primary-light</li>
+                <li class="color-secondary">$color-secondary</li>
+                <li class="color-secondary-dark">$color-secondary-dark</li>
+                <li class="color-secondary-light">$color-secondary-light</li>
+                <li class="color-tertiary">$color-tertiary</li>
+                <li class="color-tertiary-dark">$color-tertiary-dark</li>
+                <li class="color-tertiary-light">$color-tertiary-light</li>
+                <li class="color-text">$color-text</li>
+                <li class="color-border">$color-border</li>
+                <li class="color-link">$color-link</li>
+                <li class="color-link-hover">$color-link-hover</li>
+            </ul>
+            <a href="#top" class="back-to-top">Back to top</a>
+
+
+            <a name="lists" id="lists"></a>
+            <h2 class="reference-subheading">Lists</h2>
+
+            <code class="code-label">ul</code>
+            <ul>
+                <li>List item (unordered)</li>
+                <li>List item with longer text</li>
+                <li>Another list item</li>
+            </ul>
+    <pre><code class="language-html">{{#markdown}}
     <ul>
         <li>List item (unordered)</li>
         <li>List item with longer text</li>
         <li>Another list item</li>
     </ul>
+{{/markdown}}</code></pre>
 
-    <code class="code-label">ol</code>
+            <code class="code-label">ol</code>
+            <ol>
+                <li>List item (ordered)</li>
+                <li>List item with longer text</li>
+                <li>Another list item</li>
+            </ol>
+    <pre><code class="language-html">{{#markdown}}
     <ol>
         <li>List item (ordered)</li>
         <li>List item with longer text</li>
         <li>Another list item</li>
     </ol>
+{{/markdown}}</code></pre>
 
-    <code class="code-label">dl</code>
+            <code class="code-label">dl</code>
+            <dl>
+                <dt>Definition term</dt>
+                <dd>Definition definition</dd>
+                <dt>Definition term</dt>
+                <dd>Definition definition</dd>
+                <dd>Definition definition</dd>
+            </dl>
+    <pre><code class="language-html">{{#markdown}}
     <dl>
         <dt>Definition term</dt>
         <dd>Definition definition</dd>
@@ -90,92 +134,83 @@ layout: minimal.hbs
         <dd>Definition definition</dd>
         <dd>Definition definition</dd>
     </dl>
-    <a href="#top" class="back-to-top">Back to top</a>
+{{/markdown}}</code></pre>
+            <a href="#top" class="back-to-top">Back to top</a>
 
 
-    <a name="buttons" id="buttons"></a>
-    <h2 class="reference-heading">Buttons</h2>
-    <p class="reference-text">The following variant classes can be added to <code>.cta</code>: <code>.cta--full</code> for full width, <code>.cta--full-mobile</code> for full width only on mobile, <code>.cta--no-mobile</code> to hide on mobile, <code>.cta--right</code> to float right on tablet and desktop; as well as the below.</p>
+            <a name="forms" id="forms"></a>
+            <h2 class="reference-subheading">Forms</h2>
+            <p class="reference-text">Forms should be marked up with <code>fieldset</code>s and <code>legend</code>s. Legends will be automatically hidden (accessibly). Form fields should be organized within an ordered list. Each list item contains a label with a <code>for</code> attibute matching the appropriate input ID. Placeholder text should be added as an attribute for all applicable fields.</p>
 
-    <code class="code-label">.cta</code>
-    <input type="button" class="cta" value=".cta default" />
-
-    <code class="code-label">.cta--secondary</code>
-    <input type="button" class="cta cta--secondary" value=".cta--secondary" />
-    <a href="#top" class="back-to-top">Back to top</a>
-
-
-    <a name="forms" id="forms"></a>
-    <h2 class="reference-heading">Forms</h2>
-    <p class="reference-text">Forms should be marked up with <code>fieldset</code>s and <code>legend</code>s. Legends will be automatically hidden (accessibly). Form fields should be organized within an ordered list. Each list item contains a label with a <code>for</code> attibute matching the appropriate input ID. Placeholder text should be added as an attribute for all applicable fields.</p>
-
-    <form>
-        <fieldset>
-            <legend>Fieldset Name</legend>
-            <ol>
-                <li>
-                    <label for="profile_first_name">First Name</label>
-                    <input type="text" placeholder="First Name" id="profile_first_name" name="profile_first_name" required />
-                </li>
-                <li>
-                    <label for="profile_email">Email</label>
-                    <input type="email" placeholder="Email" id="profile_email" name="profile_email" required />
-                </li>
-                <li>
-                    <label for="profile_zip">Zip Code</label>
-                    <input type="text" placeholder="ZIP Code" id="profile_zip" name="profile_zip" />
-                </li>
-                <li>
-                    <label for="profile_gender">.form-list--radio</label>
-                    <ul class="form-list--radio">
+            <form>
+                <fieldset>
+                    <legend>Fieldset Name</legend>
+                    <ol>
                         <li>
-                            <input type="radio" id="profile_gender_female" name="profile_gender" value="F" checked />
-                            <label for="profile_gender_female">Female</label>
+                            <label for="profile_first_name">First Name</label>
+                            <input type="text" placeholder="First Name" id="profile_first_name" name="profile_first_name" required />
                         </li>
                         <li>
-                            <input type="radio" id="profile_gender_male" name="profile_gender" value="M" />
-                            <label for="profile_gender_male">Male</label>
+                            <label for="profile_email">Email</label>
+                            <input type="email" placeholder="Email" id="profile_email" name="profile_email" required />
                         </li>
                         <li>
-                            <input type="radio" id="profile_gender_unspecified" name="profile_gender" value="U" />
-                            <label for="profile_gender_unspecified">Unspecified</label>
+                            <label for="profile_zip">Zip Code</label>
+                            <input type="text" placeholder="ZIP Code" id="profile_zip" name="profile_zip" />
+                            <p class="note">Please use only the first 5 digits.</p>
                         </li>
-                    </ul>
-                </li>
-                <li>
-                    <label>Month</label>
-                    <select class="month" name="profile_dob_month" id="signUpMonth" data-parsley-required-message="*" required>
-                        <option value="">Month</option>
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4" selected="selected">April</option>
-                        <option value="5">May</option>
-                        <option value="6">June</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
-                    </select>
-                </li>
-                <li>
-                    <input type="submit" value="Submit" class="cta" />
-                </li>
-            </ol>
-        </fieldset>
-    </form>
-    <a href="#top" class="back-to-top">Back to top</a>
+                        <li>
+                            <label for="profile_gender">.form-list--radio</label>
+                            <ul class="form-list--radio">
+                                <li>
+                                    <input type="radio" id="profile_gender_female" name="profile_gender" value="F" checked />
+                                    <label for="profile_gender_female">Female</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="profile_gender_male" name="profile_gender" value="M" />
+                                    <label for="profile_gender_male">Male</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="profile_gender_unspecified" name="profile_gender" value="U" />
+                                    <label for="profile_gender_unspecified">Unspecified</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label>Month</label>
+                            <select class="month" name="profile_dob_month" id="signUpMonth" data-parsley-required-message="*" required>
+                                <option value="">Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4" selected="selected">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </li>
+                        <li>
+                            <input type="submit" value="Submit" class="cta" />
+                        </li>
+                    </ol>
+                </fieldset>
+            </form>
+            <a href="#top" class="back-to-top">Back to top</a>
 
 
-    <a name="helpers" id="helpers"></a>
-    <h2 class="reference-heading">Helpers</h2>
-    <a href="#top" class="back-to-top">Back to top</a>
+            <a name="helpers" id="helpers"></a>
+            <h2 class="reference-subheading">Helpers</h2>
+            <a href="#top" class="back-to-top">Back to top</a>
 
 
-    <a name="other" id="other"></a>
-    <h2 class="reference-heading">Other</h2>
-
+            <a name="other" id="other"></a>
+            <h2 class="reference-subheading">Other</h2>
+        </div>
+    </div>
 
 </div>
